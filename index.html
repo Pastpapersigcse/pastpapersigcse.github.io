@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers IGCSE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5e9;
+        }
+        header {
+            background: #007bff; /* Blue color for header */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .search {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+        .search button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search button:hover {
+            background: #0056b3;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .subject {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            z-index: 2; /* Ensure subjects are above background */
+        }
+        .subject a {
+            display: block;
+            padding: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .subject a:hover {
+            opacity: 0.8;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007bff;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        /* Background images */
+        .background-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            animation: slide 30s infinite;
+            z-index: 1; /* Place behind subjects */
+        }
+        .background-slider div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            16.67% { transform: translateX(0); }
+            20% { transform: translateX(-100%); }
+            36.67% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            56.67% { transform: translateX(-200%); }
+            60% { transform: translateX(-300%); }
+            76.67% { transform: translateX(-300%); }
+            80% { transform: translateX(-400%); }
+            96.67% { transform: translateX(-400%); }
+            100% { transform: translateX(-500%); }
+        }
+
+        /* Overlay to maintain subject color visibility */
+        .subject-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 1; /* Place above background but behind subjects */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Past Papers <p>IGCSE<p> Latest past Papers available here with all the content needed for revision</h1>
+</header>
+
+<div class="search">
+    <input type="text" id="searchInput" placeholder="Search past papers..." onkeyup="filterSubjects()" />
+    <button type="button" onclick="filterSubjects()">Search</button>
+</div>
+
+<div class="container" id="subjectsContainer">
+    <!-- Background slider -->
+    <div class="background-slider">
+        <div style="background-image: url('image1.jpg');"></div>
+        <div style="background-image: url('image2.jpg');"></div>
+        <div style="background-image: url('image3.jpg');"></div>
+        <div style="background-image: url('image4.jpg');"></div>
+        <div style="background-image: url('image5.jpg');"></div>
+        <div style="background-image: url('image6.jpg');"></div>
+    </div>
+
+    <div class="subject-overlay"></div> <!-- Overlay -->
+    
+    <div class="subject" style="background-color: #007bff;"> <!-- Accounting -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Accounting-0452">Accounting (0452)</a>
+    </div>
+    <div class="subject" style="background-color: #8e44ad;"> <!-- Art and Design -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Art-and-Design-0400">Art and Design (0400)</a>
+    </div>
+    <div class="subject" style="background-color: #ff6b81;"> <!-- Biology -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Biology-0610">Biology (0610)</a>
+    </div>
+    <div class="subject" style="background-color: #007bff;"> <!-- Business Studies -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Business-Studies-0450">Business Studies (0450)</a>
+    </div>
+    <div class="subject" style="background-color: #ffcc00;"> <!-- Chemistry -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Chemistry-0620">Chemistry (0620)</a>
+    </div>
+    <div class="subject" style="background-color: #e67e22;"> <!-- Environmental Management -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Environmental-Management-0680">Environmental Management (0680)</a>
+    </div>
+    <div class="subject" style="background-color: #e67e22;"> <!-- French -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/French-0520">French (0520)</a>
+    </div>
+    <div class="subject" style="background-color: #f39c12;"> <!-- Geography -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Geography-0460">Geography (0460)</a>
+    </div>
+    <div class="subject" style="background-color: #e74c3c;"> <!-- History -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/History-0470">History (0470)</a>
+    </div>
+    <div class="subject" style="background-color: #3498db;"> <!-- ICT -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Information-and-Communication-Technology-0417">Information and Communication Technology (0417)</a>
+    </div>
+    <div class="subject" style="background-color: #3498db;"> <!-- Mathematics -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Mathematics-0580">Mathematics (0580)</a>
+    </div>
+    <div class="subject" style="background-color: #1abc9c;"> <!-- Music -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Music-0410">Music (0410)</a>
+    </div>
+    <div class="subject" style="background-color: #e74c3c;"> <!-- Literature in English -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/English-Literature-0486">Literature in English (0486)</a>
+    </div>
+    <div class="subject" style="background-color: #e74c3c;"> <!-- Spanish -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Spanish-0530">Spanish (0530)</a>
+    </div>
+    <div class="subject" style="background-color: #1abc9c;"> <!-- Physics -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Physics-0625">Physics (0625)</a>
+    </div>
+    <div class="subject" style="background-color: #95a5a6;"> <!-- Global Perspectives -->
+        <a href="https://pastpapers.co/cie/?dir=IGCSE/Global-Perspectives-0457">Global Perspectives (0457)</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Past Papers Archive</p>
+</footer>
+
+<script>
+    function filterSubjects() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const container = document.getElementById('subjectsContainer');
+        const subjects = container.getElementsByClassName('subject');
+
+        for (let i = 0; i < subjects.length; i++) {
+            const subjectLink = subjects[i].getElementsByTagName('a')[0];
+            if (subjectLink) {
+                const textValue = subjectLink.textContent || subjectLink.innerText;
+                subjects[i].style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
